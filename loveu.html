@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedido de Namoro</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Alinhar conteúdo à esquerda */
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/originals/84/9f/d4/849fd40872c61e5efa186894b8906f45.png'); /* Adicione o caminho para sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+  #proposal {
+    position: absolute; /* Posição absoluta para alinhar no canto esquerdo */
+    top: 20px; /* Distância do topo */
+    left: 20px; /* Distância da esquerda */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    font-size: 36px;
+    font-family: Arial, sans-serif;
+    color: transparent; /* Inicialmente transparente */
+    opacity: 0;
+    animation: fadein 2s forwards, appear 2s forwards; /* Animação de surgimento */
+    cursor: pointer; /* Cursor de ponteiro para indicar interatividade */
+  }
+  #proposal:hover {
+    color: black; /* Cor do texto ao passar o mouse */
+    background-color: #ff6b6b; /* Cor de fundo ao passar o mouse */
+    border-radius: 5px; /* Borda arredondada ao passar o mouse */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra ao passar o mouse */
+    transition: all 0.3s ease; /* Transição suave */
+  }
+  #proposal span {
+    color: #ff6b6b; /* Cor do coração */
+    animation: heartbeat 1.5s infinite; /* Animação do coração */
+  }
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes appear {
+    0% {
+      color: transparent; /* Inicialmente transparente */
+    }
+    100% {
+      color: black; /* Surge */
+    }
+  }
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+</style>
+</head>
+<body>
+<div id="proposal" onclick="redirect()"><span>clica aqui?</span><span>&#10084;</span></div>
+<script>
+function redirect() {
+  window.location.href = "http://localhost/pedido/index.html"; // Altere para o URL da outra página
+}
+</script>
+</body>
+</html>
